@@ -48,6 +48,7 @@ int main(int argc, char **argv)
         }
 
         printf("----------------------------------\nFILE: %s\n", dent->d_name);
+        fflush(stdout);
         if (!file_copy(STDOUT_FILENO, fd)) {
             closedir(dir);
             return 2;
